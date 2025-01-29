@@ -1,0 +1,165 @@
+/* Скидання стандартних стилів для всіх елементів */
+* { 
+    margin: 0; /* Видаляє зовнішні відступи */
+    padding: 0; /* Видаляє внутрішні відступи */
+    box-sizing: border-box; 
+    border: 0; /* Видаляє всі межі */
+    outline: 0; /* Видаляє обводку */
+    text-decoration: none; /* Видаляє підкреслення у посилань */
+    list-style: none; /* Видаляє маркери у списків */
+    transition: all .4s; /* Додає плавний перехід для всіх змін */
+    font-family: 'Poppins', sans-serif; /* Встановлює основний шрифт */
+}
+
+/* Глобальні стилі для HTML-документу */
+html {
+    font-size: 62.5%; /* Робить 1rem = 10px для зручності */
+    overflow-x: hidden; /* Вимикає горизонтальний скрол */
+    scroll-behavior: smooth; /* Плавне прокручування */
+    scroll-padding-top: 7rem; /* Відступ для плавного прокручування до якоря */
+}
+
+/* Ховає стандартний скролбар у браузері */
+html::-webkit-scrollbar {
+    background: transparent; 
+    width: 0; 
+}
+
+/* Адаптивність зображень */
+img {
+    max-width: 100%; /* Не дозволяє зображенням виходити за межі батьківського контейнера */
+    height: auto; /* Зберігає пропорції зображень */
+}
+
+/* Змінні CSS для кольорів та стилів */
+& { 
+    --bg-red-color: #E31937;
+    --bg-grey-color: #384855;
+    --bg-darkgrey-color: #2B3034;
+    --bg-white-color: #FCFCFC;
+
+    --txt-black-color: #0C0C0C;
+    --txt-white-color: #FCFCFC;
+    --txt-red-color: #E31937;
+
+    --btn-lightred-color: #E31937;
+    --btn-red-color: #E80F2F;
+    --btn-darkred-color: #C8001E;   
+    --btn-grey-color: #D9D9D9;
+
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8); /* Тінь для елементів */
+
+    /* Адаптивні розміри шрифтів */
+    --big-fontsize: calc(30px + (75 - 30) * ((100vw - 300px) / (1500 - 300))); /* Великий шрифт */
+    --med-fontsize: calc(16px + (35 - 16) * ((100vw - 300px) / (1500 - 300))); /* Середній шрифт */
+    --smal-fontsize: calc(12px + (18 - 12) * ((100vw - 300px) / (1500 - 300))); /* Малий шрифт */
+}
+
+/*HEADER: SECTION*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 10rem;
+    background-color: var(--bg-white-color);
+}
+
+@font-face {
+    font-family: 'Tesla';
+    src: url(./fonts/TESLA.ttf);
+}
+
+.header .logo {
+    font-family: 'Tesla', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #111;
+}
+
+.header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header nav a {
+    font-size: 2.4rem;
+    color: var(--txt-black-color);
+    font-weight: 400;
+}
+
+.header .btn {
+    background-color: var(--bg-red-color);
+    color: var(--txt-white-color);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 36px;
+    border-radius: 20px;
+    gap: 8;
+    padding: 1rem 3rem;
+}
+
+.header .btn:hover {
+    background-color: #c91f1f;
+}
+/*HEADER: SECTION*/
+
+/*JUST RIDE IT: SECTION*/
+.main {
+    background-color: var(--bg-white-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 2.5rem 10rem;
+  }
+  
+  .left-text {
+    font-size: 12rem; 
+    font-weight: 500;
+    white-space: nowrap; 
+  }
+  
+  .right-text {
+    max-width: 500px;  
+    text-align: justify;  
+    font-size: 2.4rem;
+    border-bottom: 2px solid black; /* Додає чорне нижнє підкреслення */
+    padding-bottom: 10px; /* Додає відступ між текстом і лінією */
+  }
+  
+  .right-text a {
+    color: var(--txt-red-color); /* Змінює колір посилання */
+    text-decoration: none;
+  }
+
+.main .img-box {
+    padding-top: 60rem;
+    background: linear-gradient(rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)), url(img/main-photo.jpeg) 
+    center/cover no-repeat;
+}
+/*JUST RIDE IT: SECTION*/
+
+/*WHAT`S SPECIAL ABOUT IT?: SECTION*/
+/*WHAT`S SPECIAL ABOUT IT?: SECTION*/
+
+/*YOUR GUIDE: SECTION*/
+/*YOUR GUIDE: SECTION*/
+
+/*WHY TESLA?: SECTION*/
+/*WHY TESLA?: SECTION*/
+
+/*A BRAND OF TRUST: SECTION*/
+/*A BRAND OF TRUST: SECTION*/
+
+/*HISTORY: SECTION*/
+/*HISTORY: SECTION*/
+
+/*SUBSCRIBE: SECTION*/
+/*SUBSCRIBE: SECTION*/
+
+/*FOOTER: SECTION*/
+/*FOOTER: SECTION*/
+
