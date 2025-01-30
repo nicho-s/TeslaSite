@@ -106,46 +106,271 @@ img {
 /*JUST RIDE IT: SECTION*/
 .main {
     background-color: var(--bg-white-color);
+    position: relative;
 }
 
-.container {
+.main .container {
     display: flex;
     justify-content: space-between; 
     align-items: center;
     padding: 2.5rem 10rem;
-  }
+}
   
-  .left-text {
+.main .container .left-text {
     font-size: 12rem; 
     font-weight: 500;
     white-space: nowrap; 
-  }
+}
   
-  .right-text {
+.main .container .right-text {
     max-width: 500px;  
     text-align: justify;  
     font-size: 2.4rem;
     border-bottom: 2px solid black; /* Додає чорне нижнє підкреслення */
     padding-bottom: 10px; /* Додає відступ між текстом і лінією */
-  }
+}
   
-  .right-text a {
+.main .container .right-text a {
     color: var(--txt-red-color); /* Змінює колір посилання */
     text-decoration: none;
-  }
+}
 
 .main .img-box {
-    padding-top: 60rem;
-    background: linear-gradient(rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)), url(img/main-photo.jpeg) 
+    padding-top: 64rem;
+    background: url(img/main-photo.jpeg) 
     center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+    background-position: center -25rem;
 }
 /*JUST RIDE IT: SECTION*/
 
 /*WHAT`S SPECIAL ABOUT IT?: SECTION*/
-/*WHAT`S SPECIAL ABOUT IT?: SECTION*/
+.about {
+    background-color: var(--bg-red-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative; /* Робимо секцію поверх */
+    z-index: 2; /* Встановлюємо вищий порядок накладання */
+    margin-top: -20px; /* Підтягуємо секцію поверх фото */
+}
+
+.about .ico-class {
+    padding-top: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    justify-content:space-between;
+}
+
+.about .ico-class .ico-box {
+    min-width: 22rem;
+}
+
+.about .text-class {
+    padding-bottom: 15rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    justify-content:space-between;
+}
+
+.about .text-class a {
+    border-top: 2px solid var(--bg-white-color);
+    gap: 1rem;
+    font-weight: 400;
+    font-size: 2.4rem;
+    min-width: 21rem;
+    color: var(--txt-white-color);
+}
+
+.ph--car-profile {
+    width: 4.8rem;
+    height: 4.8rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M240 112h-28.69L168 68.69A15.86 15.86 0 0 0 156.69 64H44.28A16 16 0 0 0 31 71.12L1.34 115.56A8.07 8.07 0 0 0 0 120v48a16 16 0 0 0 16 16h17a32 32 0 0 0 62 0h66a32 32 0 0 0 62 0h17a16 16 0 0 0 16-16v-40a16 16 0 0 0-16-16M44.28 80h112.41l32 32H23ZM64 192a16 16 0 1 1 16-16a16 16 0 0 1-16 16m128 0a16 16 0 1 1 16-16a16 16 0 0 1-16 16m48-24h-17a32 32 0 0 0-62 0H95a32 32 0 0 0-62 0H16v-40h224Z'/%3E%3C/svg%3E");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ph--gear {
+    width: 4.8rem;
+    height: 4.8rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48m0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32m88-29.84q.06-2.16 0-4.32l14.92-18.64a8 8 0 0 0 1.48-7.06a107.2 107.2 0 0 0-10.88-26.25a8 8 0 0 0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186 40.54a8 8 0 0 0-3.94-6a107.7 107.7 0 0 0-26.25-10.87a8 8 0 0 0-7.06 1.49L130.16 40h-4.32L107.2 25.11a8 8 0 0 0-7.06-1.48a107.6 107.6 0 0 0-26.25 10.88a8 8 0 0 0-3.93 6l-2.64 23.76q-1.56 1.49-3 3L40.54 70a8 8 0 0 0-6 3.94a107.7 107.7 0 0 0-10.87 26.25a8 8 0 0 0 1.49 7.06L40 125.84v4.32L25.11 148.8a8 8 0 0 0-1.48 7.06a107.2 107.2 0 0 0 10.88 26.25a8 8 0 0 0 6 3.93l23.72 2.64q1.49 1.56 3 3L70 215.46a8 8 0 0 0 3.94 6a107.7 107.7 0 0 0 26.25 10.87a8 8 0 0 0 7.06-1.49L125.84 216q2.16.06 4.32 0l18.64 14.92a8 8 0 0 0 7.06 1.48a107.2 107.2 0 0 0 26.25-10.88a8 8 0 0 0 3.93-6l2.64-23.72q1.56-1.48 3-3l23.78-2.8a8 8 0 0 0 6-3.94a107.7 107.7 0 0 0 10.87-26.25a8 8 0 0 0-1.49-7.06Zm-16.1-6.5a74 74 0 0 1 0 8.68a8 8 0 0 0 1.74 5.48l14.19 17.73a91.6 91.6 0 0 1-6.23 15l-22.6 2.56a8 8 0 0 0-5.1 2.64a74 74 0 0 1-6.14 6.14a8 8 0 0 0-2.64 5.1l-2.51 22.58a91.3 91.3 0 0 1-15 6.23l-17.74-14.19a8 8 0 0 0-5-1.75h-.48a74 74 0 0 1-8.68 0a8 8 0 0 0-5.48 1.74l-17.78 14.2a91.6 91.6 0 0 1-15-6.23L82.89 187a8 8 0 0 0-2.64-5.1a74 74 0 0 1-6.14-6.14a8 8 0 0 0-5.1-2.64l-22.58-2.52a91.3 91.3 0 0 1-6.23-15l14.19-17.74a8 8 0 0 0 1.74-5.48a74 74 0 0 1 0-8.68a8 8 0 0 0-1.74-5.48L40.2 100.45a91.6 91.6 0 0 1 6.23-15L69 82.89a8 8 0 0 0 5.1-2.64a74 74 0 0 1 6.14-6.14A8 8 0 0 0 82.89 69l2.51-22.57a91.3 91.3 0 0 1 15-6.23l17.74 14.19a8 8 0 0 0 5.48 1.74a74 74 0 0 1 8.68 0a8 8 0 0 0 5.48-1.74l17.77-14.19a91.6 91.6 0 0 1 15 6.23L173.11 69a8 8 0 0 0 2.64 5.1a74 74 0 0 1 6.14 6.14a8 8 0 0 0 5.1 2.64l22.58 2.51a91.3 91.3 0 0 1 6.23 15l-14.19 17.74a8 8 0 0 0-1.74 5.53Z'/%3E%3C/svg%3E");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ph--currency-circle-dollar {
+    width: 4.8rem;
+    height: 4.8rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m40-68a28 28 0 0 1-28 28h-4v8a8 8 0 0 1-16 0v-8h-16a8 8 0 0 1 0-16h36a12 12 0 0 0 0-24h-24a28 28 0 0 1 0-56h4v-8a8 8 0 0 1 16 0v8h16a8 8 0 0 1 0 16h-36a12 12 0 0 0 0 24h24a28 28 0 0 1 28 28'/%3E%3C/svg%3E");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ph--folder {
+    width: 4.8rem;
+    height: 4.8rem;
+    --svg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgNDggNDgiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjQiPjxwYXRoIGQ9Ik01IDhhMiAyIDAgMCAxIDItMmgxMmw1IDZoMTdhMiAyIDAgMCAxIDIgMnYyNmEyIDIgMCAwIDEtMiAySDdhMiAyIDAgMCAxLTItMnoiLz48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIGQ9Ik0xOS44IDIxaDguNGwyLjggMy41M0wyNCAzM2wtNy04LjQ3eiIvPjwvZz48L3N2Zz4=");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between; 
+    padding: 5rem 10rem;
+    gap: 5rem;
+}
+
+    .left-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-box .btn {
+        border: 1px solid var(--bg-white-color);
+        border-radius: 10px;
+        display: flex;  
+        justify-content: center;
+        max-width: 250px;
+    }
+    
+    .left-box .btn a {
+        font-size: 2.4rem;
+        color: var(--txt-white-color);
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .text-container {
+        padding-top: 3rem;
+        font-size: 4.8rem;
+        font-weight: 600;
+        color: var(--txt-white-color);
+        min-width: 500px;
+    }
+
+    .right-box a {
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: var(--txt-white-color);
+    }
+/*WHAT`S SPECIAL ABOUT IT?  : SECTION*/
 
 /*YOUR GUIDE: SECTION*/
+.guide {
+    background-color: var(--bg-white-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    z-index: 3;
+    margin-top: -20px;
+    padding: 5rem 10rem;
+}
+
+.guide .content {
+    display: flex; /* Робимо секцію гнучкою */
+    align-items: center; /* Вирівнюємо текст та зображення по вертикалі */
+    gap: 10rem; /* Проміжок між фото і текстом */
+}
+
+.guide .content .img-box {
+    flex: 0.45; 
+}
+
+.guide .content .img-box .image-in-img {
+    background: url(./img/person-tesla.jpeg) center/cover no-repeat;
+    padding-top: 50rem;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+
+.guide .content .text-box {
+    flex: 1; /* Займає решту 50% ширини */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Відступи між елементами текстового блоку */
+    max-width: 50%; /* Текст обмежений половиною ширини */
+}
+
+.guide .content .text-box h2 {
+    font-size: 4.2rem;
+    color: var(--text-dark-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.guide .content .text-box p {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-gray-color);
+}
+
+.guide .content .text-box .btn-group {
+    display: flex; /* Вирівнюємо кнопки в рядок */
+    gap: 1rem; /* Відступ між кнопками */
+    margin-top: 2rem;
+}
+
+.guide .content .text-box .btn-group .btn1 {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: var(--bg-red-color);
+    color: var(--bg-white-color);
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.guide .content .text-box .btn-group .btn2 {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--bg-white-color);
+    color: var(--txt-red-color);
+    border-radius: 20px;
+    border: 1px solid var(--bg-red-color);
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.guide .content .text-box .btn-group .btn1:hover {
+    background-color: #c91f1f;
+}
+
+.guide .content .text-box .btn-group .btn2:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
 /*YOUR GUIDE: SECTION*/
 
 /*WHY TESLA?: SECTION*/
