@@ -156,7 +156,7 @@ img {
 }
 
 .about .ico-class {
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-left: 10rem;
     padding-right: 10rem;
     display: flex;
@@ -239,7 +239,7 @@ img {
 .about .container {
     display: flex;
     justify-content: space-between; 
-    padding: 5rem 10rem;
+    padding: 10rem 10rem;
     gap: 5rem;
 }
 
@@ -286,7 +286,7 @@ img {
     position: relative;
     z-index: 3;
     margin-top: -20px;
-    padding: 5rem 10rem;
+    padding: 10rem 10rem;
 }
 
 .guide .content {
@@ -374,17 +374,447 @@ img {
 /*YOUR GUIDE: SECTION*/
 
 /*WHY TESLA?: SECTION*/
+.whytesla {
+    background-color: var(--bg-grey-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    z-index: 4;
+    margin-top: -20px;
+    padding: 10rem 10rem;
+    padding-bottom: 15rem;
+    text-align: center;
+}
+
+.whytesla .text-title {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--bg-white-color);
+    padding: 1rem 2rem;
+    border: 1px solid var(--bg-white-color);
+    border-radius: 10px;
+    background-color: var(--bg-grey-color);
+}
+
+.whytesla .text-undertitle {
+    display: block;
+    font-size: 4.2rem;
+    font-weight: 400;
+    color: var(--bg-white-color);
+    margin: 2rem 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.box {
+    background-color: var(--bg-grey-color);
+    border-radius: 20px;
+    border: 1px solid var(--bg-white-color);
+    padding: 2rem;
+    text-align: left;
+    max-width: 30%;
+}
+
+.ico-box {
+    margin-bottom: 1rem;
+}
+
+.ph--leaf {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M223.45 40.07a8 8 0 0 0-7.52-7.52C139.8 28.08 78.82 51 52.82 94a87.1 87.1 0 0 0-12.76 49c.57 15.92 5.21 32 13.79 47.85l-19.51 19.5a8 8 0 0 0 11.32 11.32l19.5-19.51C81 210.73 97.09 215.37 113 215.94q1.67.06 3.33.06A86.93 86.93 0 0 0 162 203.18c43-26 65.93-86.97 61.45-163.11m-69.7 149.43c-22.75 13.78-49.68 14-76.71.77l88.63-88.62a8 8 0 0 0-11.32-11.32L65.73 179c-13.19-27-13-54 .77-76.71c22.09-36.47 74.6-56.44 141.31-54.06c2.39 66.66-17.59 119.18-54.06 141.27'/%3E%3C/svg%3E");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ph--battery-charging-vertical-light {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M149.1 132.85a6 6 0 0 1 .27 5.83l-16 32a6 6 0 1 1-10.74-5.36L134.29 142H112a6 6 0 0 1-5.37-8.68l16-32a6 6 0 0 1 10.74 5.36L121.71 130H144a6 6 0 0 1 5.1 2.85M96 14h64a6 6 0 0 0 0-12H96a6 6 0 0 0 0 12m102 42v168a22 22 0 0 1-22 22H80a22 22 0 0 1-22-22V56a22 22 0 0 1 22-22h96a22 22 0 0 1 22 22m-12 0a10 10 0 0 0-10-10H80a10 10 0 0 0-10 10v168a10 10 0 0 0 10 10h96a10 10 0 0 0 10-10Z'/%3E%3C/svg%3E");
+    background-color: var(--bg-white-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.box h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--txt-white-color);
+    margin-bottom: 1rem;
+}
+
+.box p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--txt-white-color);
+    line-height: 1.5;
+}
+
 /*WHY TESLA?: SECTION*/
 
 /*A BRAND OF TRUST: SECTION*/
+/* A BRAND OF TRUST: SECTION */
+.brand {
+    background-color: var(--bg-red-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 7rem 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+    text-align: center;
+    color: var(--bg-white-color);
+    z-index: 5;
+    margin-top: -35px;
+}
+
+.brand .content {
+    display: flex;
+    gap: 5rem; /* Відстань між контейнерами */
+    flex-direction: row;
+    justify-content: space-between; /* Вирівнювання за шириною */
+    margin: 0 auto; /* Центрування основного контейнера */
+}
+
+.brand .content .content-left {
+    flex: 1;
+    max-width: 20%;
+}
+.brand .content .content-right {
+    flex: 1; /* Дозволяє контейнерам займати рівний простір */
+    max-width: 50%; /* Обмеження ширини кожного контейнера */
+}
+
+.brand .content .content-left .brand-title {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.brand .content .content-left .brand-title .badge {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    color: var(--bg-white-color);
+    background-color: var(--bg-red-color);
+    border: 1px solid var(--bg-white-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.brand .content .content-left .brand-title h2 {
+    font-size: 4.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.brand .content .content-right {
+    text-align: left;
+}
+
+.brand .content .content-right .brand-description {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 0rem 0 4rem;
+    line-height: 1.6;
+}
+
+.brand .content .content-right .partners {
+    display: flex;
+    gap: 3rem; /* Проміжок між логотипами */
+    align-items: center;
+}
+
+.brand .content .content-right .partners img {
+    max-height: 50px; /* Висота логотипів */
+    object-fit: contain;
+}
 /*A BRAND OF TRUST: SECTION*/
 
 /*HISTORY: SECTION*/
+.history {
+    background-color: var(--bg-white-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10rem 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+    color: var(--bg-darkgrey-color);
+    z-index: 5;
+    margin-top: -35px;
+}
+
+.history .content {
+    display: flex;
+    gap: 5rem; /* Відстань між контейнерами */
+    flex-direction: row;
+    justify-content: space-between; /* Вирівнювання за шириною */
+    margin: 0 auto; /* Центрування основного контейнера */
+}
+
+.history .content .content-left {
+    max-width: 51%;
+}
+
+.history .content .content-left h3{
+    max-width: 70%;
+    font-size: 4.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.history .content .content-left a{
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.history .content .content-left .btn-group {
+    display: flex; /* Вирівнюємо кнопки в рядок */
+    gap: 1rem; /* Відступ між кнопками */
+    margin-top: 2rem;
+}
+
+.history .content .content-left .btn-group .btn1 {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: var(--bg-red-color);
+    color: var(--bg-white-color);
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.history .content .content-left .btn-group .btn2 {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--bg-white-color);
+    color: var(--txt-red-color);
+    border-radius: 20px;
+    border: 1px solid var(--bg-red-color);
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.history .content .content-left .btn-group .btn1:hover {
+    background-color: #c91f1f;
+}
+
+.history .content .content-left .btn-group .btn2:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.history .content .content-right {
+    position: relative; /* Відносне позиціонування для коректного обрізання */
+    overflow: hidden; /* Приховує частини зображення за межами контейнера */
+    border-radius: 2.5rem; /* Зберігає заокруглення країв */
+    width: 50%; /* Ширина блоку для вирівнювання */
+    max-width: 500px; /* Обмеження ширини правого блоку */
+    height: 40rem; /* Висота контейнера для обрізання */
+}
+
+.history .content .content-right img {
+    width: 100%; /* Розтягує зображення за шириною контейнера */
+    height: 130%; /* Розтягує зображення за висотою контейнера */
+    object-fit: cover; /* Забезпечує обрізання зображення по боках */
+    object-position: center; /* Центрує зображення */
+    border-radius: inherit; /* Успадковує заокруглення від контейнера */
+}
+
+.history .ico-box .ph--car-profile {
+    margin-top: 5rem;
+    margin-left: 25rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23000' d='M240 112h-28.69L168 68.69A15.86 15.86 0 0 0 156.69 64H44.28A16 16 0 0 0 31 71.12L1.34 115.56A8.07 8.07 0 0 0 0 120v48a16 16 0 0 0 16 16h17a32 32 0 0 0 62 0h66a32 32 0 0 0 62 0h17a16 16 0 0 0 16-16v-40a16 16 0 0 0-16-16M44.28 80h112.41l32 32H23ZM64 192a16 16 0 1 1 16-16a16 16 0 0 1-16 16m128 0a16 16 0 1 1 16-16a16 16 0 0 1-16 16m48-24h-17a32 32 0 0 0-62 0H95a32 32 0 0 0-62 0H16v-40h224Z'/%3E%3C/svg%3E");
+    background-color: var(--bg-red-color);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    margin-bottom: -1rem;
+}
+
+.history .ico-box .line {
+    border-bottom: 2px dashed red;
+}
 /*HISTORY: SECTION*/
 
 /*SUBSCRIBE: SECTION*/
+.subscribe {
+    background-color: var(--bg-grey-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10rem 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+    color: var(--bg-darkgrey-color);
+    z-index: 5;
+    margin-top: -35px;
+}
+
+.subscribe .content {
+    gap: 10rem;
+}
+
+.subscribe .content .content-left h3 {
+    font-weight: 500;
+    font-size: 4.2rem;
+    color: var(--txt-white-color);
+}
+
+.subscribe .content .content-left a {
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: var(--txt-white-color);
+}
+
+.subscribe .content .content-left .contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe .content .content-left .contact-form .contact-form-input{
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    margin-top: 2rem;
+    background-color: var(--bg-grey-color);
+    border-bottom: 1px solid var(--bg-white-color);
+    color: var(--txt-white-color);
+    placeholder-color: var(--txt-white-color);
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.subscribe .content .content-left .contact-form .contact-form-input::placeholder{
+    color: var(--txt-white-color);
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.subscribe .content .content-left .contact-form .checkbox-container {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.6rem; 
+    color: var(--txt-white-color);
+}
+
+.subscribe .content .content-left .contact-form .checkbox-container .privacy-policy {
+    font-weight: 400;
+    font-size: 1.6rem !important; 
+    color: var(--txt-white-color);
+    border-bottom: 1px solid var(--txt-white-color);
+}
+
+.subscribe .content .content-left .contact-form .submit-btn {
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    background-color: var(--bg-grey-color);
+    color: var(--bg-white-color);
+    border: 1px solid var(--bg-white-color);
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe .content .content-left .contact-form .submit-btn:hover {
+    background-color: var(--bg-darkgrey-color);
+}
+
+.subscribe .content .content-right {
+    position: relative; /* Відносне позиціонування для коректного обрізання */
+    overflow: hidden; /* Приховує частини зображення за межами контейнера */
+    border-radius: 2.5rem; /* Зберігає заокруглення країв */
+    width: 100%; /* Ширина блоку для вирівнювання */
+    max-width: 50%; /* Обмеження ширини правого блоку */
+    min-height: 40rem; /* Висота контейнера для обрізання */
+}
+
+.subscribe .content .content-right img {
+    width: 100%; /* Розтягує зображення за шириною контейнера */
+    height: 100%; /* Розтягує зображення за висотою контейнера */
+    object-fit: cover; /* Забезпечує обрізання зображення по боках */
+    object-position: center; /* Центрує зображення */
+    border-radius: inherit; /* Успадковує заокруглення від контейнера */
+}
 /*SUBSCRIBE: SECTION*/
 
 /*FOOTER: SECTION*/
-/*FOOTER: SECTION*/
+.footer {
+    background-color: var(--bg-darkgrey-color);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 10rem 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 5;
+    margin-top: -35px;
+}
 
+.footer .content-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer .content-top nav {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.footer .content-top nav a {
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: var(--txt-white-color);
+}
+
+.footer .footer-logo {
+    font-family: 'Tesla', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--txt-white-color);
+}
+
+.footer .content-bottom {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -7rem;
+}
+
+.footer .content-bottom nav {
+    font-weight: 500;
+    font-size: 1.6rem;
+    align-items: center;
+    color: var(--txt-white-color);
+}
+/*FOOTER: SECTION*/
