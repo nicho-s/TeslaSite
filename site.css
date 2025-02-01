@@ -50,9 +50,14 @@ img {
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8); /* Тінь для елементів */
 
     /* Адаптивні розміри шрифтів */
-    --big-fontsize: calc(30px + (75 - 30) * ((100vw - 300px) / (1500 - 300))); /* Великий шрифт */
-    --med-fontsize: calc(16px + (35 - 16) * ((100vw - 300px) / (1500 - 300))); /* Середній шрифт */
-    --smal-fontsize: calc(12px + (18 - 12) * ((100vw - 300px) / (1500 - 300))); /* Малий шрифт */
+    /* calc(МИН + (МАКС - МИН) * ((100vw - МИН_ЕКРАН) / (МАКС_ЕКРАН - МИН_ЕКРАН))); */
+    --the-greatest-fontsize: calc(30px + (120 - 75) * ((100vw - 300px) / (1500 - 300)));
+    --great-fontsize: calc(24px + (75 - 24) * ((100vw - 300px) / (1500 - 300))); 
+    --big-fontsize: calc(24px + (50 - 24) * ((100vw - 300px) / (1500 - 300)));
+    --big-42-fontsize: calc(24px + (42 - 24) * ((100vw - 300px) / (1500 - 300)));
+    --med-32-fontsize: calc(20px + (32 - 20) * ((100vw - 300px) / (1500 - 300))); 
+    --med-fontsize: calc(18px + (24 - 18) * ((100vw - 300px) / (1500 - 300))); 
+    --smal-fontsize: calc(16px + (18 - 16) * ((100vw - 300px) / (1500 - 300))); 
 }
 
 /*HEADER: SECTION*/
@@ -71,7 +76,7 @@ img {
 
 .header .logo {
     font-family: 'Tesla', sans-serif;
-    font-size: 5rem;
+    font-size: var(--big-fontsize);
     font-weight: 400;
     color: #111;
 }
@@ -82,7 +87,7 @@ img {
 }
 
 .header nav a {
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     color: var(--txt-black-color);
     font-weight: 400;
 }
@@ -90,7 +95,7 @@ img {
 .header .btn {
     background-color: var(--bg-red-color);
     color: var(--txt-white-color);
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 500;
     line-height: 36px;
     border-radius: 20px;
@@ -117,15 +122,15 @@ img {
 }
   
 .main .container .left-text {
-    font-size: 12rem; 
+    font-size: var(--the-greatest-fontsize);
     font-weight: 500;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
   
 .main .container .right-text {
     max-width: 500px;  
     text-align: justify;  
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     border-bottom: 2px solid black; /* Додає чорне нижнє підкреслення */
     padding-bottom: 10px; /* Додає відступ між текстом і лінією */
 }
@@ -136,12 +141,40 @@ img {
 }
 
 .main .img-box {
-    padding-top: 64rem;
-    background: url(img/main-photo.jpeg) 
-    center/cover no-repeat;
+    width: 100%; /* Зображення займає всю ширину секції */
+    height: 80vh; /* Висота 80% від висоти екрану */
+    background: url(img/main-photo.jpeg) center/cover no-repeat;
     position: relative;
     z-index: 1;
-    background-position: center -25rem;
+}
+
+/* 📱 Медіа-запити для адаптації */
+@media (max-width: 1200px) {
+    .main .img-box {
+        height: 50vh; /* Трохи зменшуємо висоту */
+        background-position: center center; /* Вирівнюємо */
+    }
+}
+
+@media (max-width: 768px) {
+    .main .container {
+        flex-direction: column; /* Стек тексту і зображення в колонку */
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .main .img-box {
+        height: 30vh; /* Менше місця для зображення */
+        background-size: contain; /* Щоб зображення повністю поміщалося */
+        background-position: center center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main .img-box {
+        height: 20vh; /* Ще менше місця */
+        background-size: contain;
+    }
 }
 /*JUST RIDE IT: SECTION*/
 
@@ -179,7 +212,7 @@ img {
     border-top: 2px solid var(--bg-white-color);
     gap: 1rem;
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     min-width: 21rem;
     color: var(--txt-white-color);
 }
@@ -257,7 +290,7 @@ img {
     }
     
     .left-box .btn a {
-        font-size: 2.4rem;
+        font-size: var(--med-fontsize);
         color: var(--txt-white-color);
         text-align: center;
         padding: 0.5rem;
@@ -265,14 +298,14 @@ img {
     
     .text-container {
         padding-top: 3rem;
-        font-size: 4.8rem;
+        font-size: var(--big-fontsize);
         font-weight: 600;
         color: var(--txt-white-color);
         min-width: 500px;
     }
 
     .right-box a {
-        font-size: 2.4rem;
+        font-size: var(--med-fontsize);
         font-weight: 400;
         color: var(--txt-white-color);
     }
@@ -316,14 +349,14 @@ img {
 }
 
 .guide .content .text-box h2 {
-    font-size: 4.2rem;
+    font-size: var(--big-42-fontsize);
     color: var(--text-dark-color);
     margin-bottom: 1rem;
     font-weight: 400;
 }
 
 .guide .content .text-box p {
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
     line-height: 1.8;
     color: var(--text-gray-color);
@@ -338,7 +371,7 @@ img {
 .guide .content .text-box .btn-group .btn1 {
     margin-top: 1rem;
     padding: 1rem 2rem;
-    font-size: 1.6rem;
+    font-size: var(--med-fontsize);
     font-weight: 500;
     background-color: var(--bg-red-color);
     color: var(--bg-white-color);
@@ -359,7 +392,7 @@ img {
     display: inline-block;
     text-align: center;
     transition: background-color 0.3s ease;
-    font-size: 1.6rem;
+    font-size: var(--med-fontsize);
     font-weight: 600;
 }
 
@@ -388,7 +421,7 @@ img {
 
 .whytesla .text-title {
     display: inline-block;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
     color: var(--bg-white-color);
     padding: 1rem 2rem;
@@ -399,7 +432,7 @@ img {
 
 .whytesla .text-undertitle {
     display: block;
-    font-size: 4.2rem;
+    font-size: var(--big-42-fontsize);
     font-weight: 400;
     color: var(--bg-white-color);
     margin: 2rem 0;
@@ -453,14 +486,14 @@ img {
 }
 
 .box h3 {
-    font-size: 3.2rem;
+    font-size: var(--med-32-fontsize);
     font-weight: 500;
     color: var(--txt-white-color);
     margin-bottom: 1rem;
 }
 
 .box p {
-    font-size: 1.8rem;
+    font-size: var(--smal-fontsize);
     font-weight: 400;
     color: var(--txt-white-color);
     line-height: 1.5;
@@ -507,7 +540,7 @@ img {
 
 .brand .content .content-left .brand-title .badge {
     display: inline-block;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
     padding: 0.5rem 1.5rem;
     color: var(--bg-white-color);
@@ -518,7 +551,7 @@ img {
 }
 
 .brand .content .content-left .brand-title h2 {
-    font-size: 4.2rem;
+    font-size: var(--big-42-fontsize);
     font-weight: 500;
     margin-top: 1rem;
 }
@@ -528,7 +561,7 @@ img {
 }
 
 .brand .content .content-right .brand-description {
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
     margin: 0rem 0 4rem;
     line-height: 1.6;
@@ -573,13 +606,13 @@ img {
 
 .history .content .content-left h3{
     max-width: 70%;
-    font-size: 4.2rem;
+    font-size: var(--big-42-fontsize);
     font-weight: 500;
     margin-bottom: 2rem;
 }
 
 .history .content .content-left a{
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
 }
 
@@ -592,7 +625,7 @@ img {
 .history .content .content-left .btn-group .btn1 {
     margin-top: 1rem;
     padding: 1rem 2rem;
-    font-size: 1.6rem;
+    font-size: var(--med-fontsize);
     font-weight: 500;
     background-color: var(--bg-red-color);
     color: var(--bg-white-color);
@@ -613,7 +646,7 @@ img {
     display: inline-block;
     text-align: center;
     transition: background-color 0.3s ease;
-    font-size: 1.6rem;
+    font-size: var(--med-fontsize);
     font-weight: 600;
 }
 
@@ -682,13 +715,13 @@ img {
 
 .subscribe .content .content-left h3 {
     font-weight: 500;
-    font-size: 4.2rem;
+    font-size: var(--big-42-fontsize);
     color: var(--txt-white-color);
 }
 
 .subscribe .content .content-left a {
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     color: var(--txt-white-color);
 }
 
@@ -707,32 +740,32 @@ img {
     color: var(--txt-white-color);
     placeholder-color: var(--txt-white-color);
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
 }
 
 .subscribe .content .content-left .contact-form .contact-form-input::placeholder{
     color: var(--txt-white-color);
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
 }
 
 .subscribe .content .content-left .contact-form .checkbox-container {
     margin-top: 2rem;
     font-weight: 400;
-    font-size: 1.6rem; 
+    font-size: var(--med-fontsize); 
     color: var(--txt-white-color);
 }
 
 .subscribe .content .content-left .contact-form .checkbox-container .privacy-policy {
     font-weight: 400;
-    font-size: 1.6rem !important; 
+    font-size: var(--smal-fontsize) !important; 
     color: var(--txt-white-color);
     border-bottom: 1px solid var(--txt-white-color);
 }
 
 .subscribe .content .content-left .contact-form .submit-btn {
     margin-top: 2rem;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     font-weight: 400;
     background-color: var(--bg-grey-color);
     color: var(--bg-white-color);
@@ -792,13 +825,13 @@ img {
 
 .footer .content-top nav a {
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: var(--med-fontsize);
     color: var(--txt-white-color);
 }
 
 .footer .footer-logo {
     font-family: 'Tesla', sans-serif;
-    font-size: 5rem;
+    font-size: var(--big-fontsize);
     font-weight: 400;
     color: var(--txt-white-color);
 }
@@ -813,7 +846,7 @@ img {
 
 .footer .content-bottom nav {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: var(--med-fontsize);
     align-items: center;
     color: var(--txt-white-color);
 }
